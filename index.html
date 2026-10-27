@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ssok Uploader — Post your own content to TikTok from your desktop</title>
+<meta name="description" content="Ssok Uploader is a desktop app that posts the news cards and short videos you create to your own TikTok account, with full control over privacy, interactions and content disclosure.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>
+:root{--acc:#ff5a36;--acc2:#ff8a6b;--ink:#1b1d22;--sub:#5d6470;--line:#ece7e4;--bg:#fffaf7;--card:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Noto Sans KR",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;background:rgba(255,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:9}
+nav .wrap{display:flex;align-items:center;gap:22px;height:64px}
+nav .logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:18px;color:var(--ink)}nav .logo img{width:34px;height:34px;border-radius:8px}
+nav .links{margin-left:auto;display:flex;gap:20px;font-size:14.5px}nav .links a{color:var(--sub)}
+.hero{padding:72px 0 56px}.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.badge{display:inline-block;background:#ffe9e3;color:#c2381b;font-weight:700;font-size:13px;padding:5px 12px;border-radius:999px}
+h1{font-size:46px;line-height:1.15;margin:16px 0 14px;letter-spacing:-.02em}h1 span{color:var(--acc)}
+.lead{font-size:18px;color:var(--sub);margin:0 0 26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-block;padding:13px 22px;border-radius:12px;font-weight:700;font-size:15px}
+.btn.p{background:var(--acc);color:#fff}.btn.s{background:#fff;border:1px solid var(--line);color:var(--ink)}.btn:hover{text-decoration:none;filter:brightness(.97)}
+.shot{background:linear-gradient(160deg,#ff6a45,#ff3d1f);border-radius:28px;padding:34px;box-shadow:0 24px 60px rgba(255,90,54,.25)}
+.mock{background:#16181d;border-radius:16px;padding:18px;color:#e8eaed;font-size:13px}
+.mock h4{margin:0 0 12px;font-size:15px}.mock .who{display:flex;align-items:center;gap:10px;background:#22262e;border-radius:10px;padding:8px 10px;margin-bottom:10px}
+.mock .av{width:30px;height:30px;border-radius:50%;background:var(--acc)}.mock .f{margin:8px 0 4px;font-weight:700;font-size:12px;color:#c9ced8}
+.mock .in{background:#0f1115;border:1px solid #3a3f4a;border-radius:8px;padding:7px 9px;color:#9aa3b2}
+.mock .chk{display:flex;gap:14px;color:#c9ced8}.mock .post{margin-top:12px;background:#fe2c55;border-radius:8px;text-align:center;padding:8px;font-weight:700}
+section{padding:64px 0}section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-size:32px;margin:0 0 10px;letter-spacing:-.01em}.sec-sub{color:var(--sub);margin:0 0 34px;font-size:16.5px}
+.grid{display:grid;gap:18px}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.card .ic{width:44px;height:44px;border-radius:12px;background:#ffe9e3;display:grid;place-items:center;font-size:22px;margin-bottom:12px}
+.card h3{margin:0 0 6px;font-size:18px}.card p{margin:0;color:var(--sub);font-size:15px}
+.step{position:relative;padding-top:8px}.step .n{width:34px;height:34px;border-radius:50%;background:var(--acc);color:#fff;font-weight:900;display:grid;place-items:center;margin-bottom:12px}
+.brand{display:flex;gap:16px;align-items:flex-start}.brand .dot{flex:0 0 52px;height:52px;border-radius:14px;display:grid;place-items:center;color:#fff;font-weight:900;font-size:20px}
+ul.ck{list-style:none;padding:0;margin:14px 0 0}ul.ck li{padding-left:28px;position:relative;margin:8px 0;color:var(--sub)}ul.ck li:before{content:"✓";position:absolute;left:0;color:var(--acc);font-weight:900}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:10px}.faq summary{cursor:pointer;font-weight:700}.faq p{color:var(--sub);margin:10px 0 0}
+footer{padding:36px 0;color:var(--sub);font-size:14px}footer .wrap{display:flex;gap:18px;flex-wrap:wrap;align-items:center}footer .sp{flex:1}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}h1{font-size:34px}.g3,.g4,.g2{grid-template-columns:1fr}nav .links{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="./"><img src="icon.png" alt="Ssok Uploader icon">Ssok Uploader</a>
+  <div class="links"><a href="#features">Features</a><a href="#how">How it works</a><a href="#brands">Our channels</a><a href="#faq">FAQ</a><a href="policy.html#terms">Terms</a><a href="policy.html#privacy">Privacy</a></div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <span class="badge">Desktop app for creators · 크리에이터용 데스크톱 앱</span>
+    <h1>Publish your own content to <span>TikTok</span> — straight from your desktop.</h1>
+    <p class="lead">Ssok Uploader turns the news cards and short videos you make on your computer into TikTok posts in one step. You stay in control of every post: you review the content, edit the caption and choose who can see it before anything is published.</p>
+    <div class="btns"><a class="btn p" href="#how">See how it works</a><a class="btn s" href="policy.html">Terms &amp; Privacy</a></div>
+  </div>
+  <div class="shot"><div class="mock">
+    <h4>🎵 Post to TikTok</h4>
+    <div class="who"><div class="av"></div><div><b>Your account</b><br><span style="color:#9aa3b2;font-size:12px">Posting to this TikTok account</span></div></div>
+    <div class="f">Title / Caption</div><div class="in">Today's top story in 8 cards ✨ #news</div>
+    <div class="f">Who can view this post</div><div class="in">— Select —</div>
+    <div class="f">Allow users to</div><div class="chk"><span>☐ Comment</span><span>☐ Duet</span><span>☐ Stitch</span></div>
+    <div class="f">Disclose post content</div><div class="in">Your brand / Branded content</div>
+    <div class="post">Post</div>
+  </div></div>
+</div></header>
+
+<section id="features" class="alt"><div class="wrap">
+  <h2>Features</h2>
+  <p class="sec-sub">Everything a solo creator needs to share finished work on TikTok, without moving files to a phone.</p>
+  <div class="grid g3">
+    <div class="card"><div class="ic">🎬</div><h3>Video posts</h3><p>Upload the short videos you edit on your desktop directly to your TikTok profile.</p></div>
+    <div class="card"><div class="ic">🖼️</div><h3>Photo posts</h3><p>Share news cards as a swipeable photo post — the same cards you publish on your other channels.</p></div>
+    <div class="card"><div class="ic">👀</div><h3>Preview before posting</h3><p>See the exact video or photos, the account name and the caption before you confirm.</p></div>
+    <div class="card"><div class="ic">🔒</div><h3>You choose the audience</h3><p>Pick who can view each post every time. Nothing is posted with a hidden default.</p></div>
+    <div class="card"><div class="ic">💬</div><h3>Interaction controls</h3><p>Turn comments, Duet and Stitch on or off per post, following your account settings.</p></div>
+    <div class="card"><div class="ic">🏷️</div><h3>Content disclosure</h3><p>Label promotional posts as “Your brand” or “Branded content”, in line with TikTok's policies.</p></div>
+  </div>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <h2>How it works</h2>
+  <p class="sec-sub">Four simple steps — and every post is confirmed by you.</p>
+  <div class="grid g4">
+    <div class="step"><div class="n">1</div><h3>Connect</h3><p style="color:var(--sub)">Sign in with TikTok (Login Kit) and authorize your own account.</p></div>
+    <div class="step"><div class="n">2</div><h3>Create</h3><p style="color:var(--sub)">Make your news cards or edit your short video in the app.</p></div>
+    <div class="step"><div class="n">3</div><h3>Review</h3><p style="color:var(--sub)">Check the preview, edit the caption, choose privacy, interactions and disclosure.</p></div>
+    <div class="step"><div class="n">4</div><h3>Post</h3><p style="color:var(--sub)">Press Post. It appears on your TikTok profile after TikTok finishes processing.</p></div>
+  </div>
+</div></section>
+
+<section id="brands" class="alt"><div class="wrap">
+  <h2>Our channels</h2>
+  <p class="sec-sub">Ssok Uploader was built for, and is used by, two Korean content channels run by the same creator.</p>
+  <div class="grid g2">
+    <div class="card brand"><div class="dot" style="background:#1d4e7a">쏙</div><div><h3>쏙뉴스 · Ssok News</h3><p>Today's hottest news, summarized in easy-to-read cards. “바쁜 당신을 위한 1분 핵심 정리.”</p>
+      <ul class="ck"><li>Daily news &amp; economy card posts</li><li>Photo posts you can swipe through</li></ul></div></div>
+    <div class="card brand"><div class="dot" style="background:var(--acc)">맘</div><div><h3>맘에쏙 · Mameh Ssok</h3><p>Short videos introducing useful everyday products and travel finds.</p>
+      <ul class="ck"><li>Short product &amp; travel videos</li><li>Promotional posts clearly disclosed</li></ul></div></div>
+  </div>
+</div></section>
+
+<section id="faq" class="faq"><div class="wrap">
+  <h2>FAQ</h2>
+  <details><summary>Who can use Ssok Uploader?</summary><p>Ssok Uploader is a desktop app used by its creator to publish their own content to their own TikTok accounts. It does not access or post to anyone else's account.</p></details>
+  <details><summary>What TikTok data does the app use?</summary><p>Only your basic profile (display name and avatar) to show which account you are posting to, and the creator settings TikTok provides for posting (available privacy options and interaction settings). See the <a href="policy.html#privacy">Privacy Policy</a>.</p></details>
+  <details><summary>Does it post automatically without my confirmation?</summary><p>No. Every post opens a settings window where you review the content and choose the privacy level before you press Post.</p></details>
+  <details><summary>How do I disconnect the app?</summary><p>In the TikTok app go to Settings and privacy → Security → Apps and websites, and remove Ssok Uploader. You can also delete the local token file on your computer.</p></details>
+</div></section>
+
+<footer><div class="wrap">
+  <span>© 2026 Ssok Uploader</span><span class="sp"></span>
+  <a href="policy.html#terms">Terms of Service</a><a href="policy.html#privacy">Privacy Policy</a>
+</div></footer>
+</body>
+</html>
